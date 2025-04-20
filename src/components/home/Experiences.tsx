@@ -2,6 +2,25 @@ import { AnimatedSection } from './AnimatedSection';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
+const experiences = [
+  {
+    id: 'adventure',
+    icon: '🏃‍♂️'
+  },
+  {
+    id: 'wellness',
+    icon: '🧘‍♀️'
+  },
+  {
+    id: 'culinary',
+    icon: '🍛'
+  },
+  {
+    id: 'wildlife',
+    icon: '🐘'
+  }
+];
+
 export const Experiences = () => {
   const { t } = useTranslation();
 
@@ -12,16 +31,21 @@ export const Experiences = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('home.experiences.title')}</h2>
         </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[...Array(4)].map((_, index) => (
+          {experiences.map((experience, index) => (
             <AnimatedSection key={index} delay={index * 0.2}>
               <motion.div 
-                className="text-center"
+                className="text-center bg-white rounded-lg shadow-lg overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold mb-2">{t('home.experiences.cultural.title')}</h3>
-                  <p className="text-gray-600">{t('home.experiences.cultural.description')}</p>
+                <div className="p-6">
+                  <div className="text-4xl mb-4">{experience.icon}</div>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {t(`home.experiences.${experience.id}.title`)}
+                  </h3>
+                  <p className="text-gray-600">
+                    {t(`home.experiences.${experience.id}.description`)}
+                  </p>
                 </div>
               </motion.div>
             </AnimatedSection>

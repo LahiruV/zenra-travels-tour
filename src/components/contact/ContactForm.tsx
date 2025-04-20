@@ -1,0 +1,90 @@
+import { useState } from 'react';
+import { TextField, Button } from '@zenra/widgets';
+import { EnvelopeIcon, PhoneIcon, UserIcon } from '@heroicons/react/24/outline';
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+export const ContactForm = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  return (
+    <div className="bg-white rounded-lg shadow-lg p-8">
+      <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+        Send us a Message
+      </h2>
+      
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <TextField
+          label="Full Name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          startIcon={<UserIcon className="h-5 w-5" />}
+        />
+
+        <TextField
+          label="Email"
+          name="email"
+          type="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          startIcon={<EnvelopeIcon className="h-5 w-5" />}
+        />
+
+        <TextField
+          label="Phone"
+          name="phone"
+          type="tel"
+          value={formData.phone}
+          onChange={handleChange}
+          startIcon={<PhoneIcon className="h-5 w-5" />}
+        />
+
+        <TextField
+          label="Message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          multiline
+          rows={4}
+          helperText="Tell us about your travel plans and any specific requirements"
+        />
+
+        <Button
+          type="submit"
+          variant="primary"
+          size="large"
+          fullWidth
+        >
+          Send Message
+        </Button>
+      </form>
+    </div>
+  );
+};

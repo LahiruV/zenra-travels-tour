@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { MainLayout, AdminLayout } from './layout'
-import { HomePage, AboutPage, LoginPage, RegisterPage, PackagesPage, DestinationsPage, DashboardPage, BookingsPage } from '@zenra/pages'
+import { HomePage, AboutPage, LoginPage, RegisterPage, PackagesPage, DestinationsPage, ContactPage, DashboardPage, BookingsPage } from '@zenra/pages'
 import { useAppSelector } from '@zenra/store'
 import { Navigate } from 'react-router-dom'
 
@@ -26,6 +26,7 @@ function App() {
           <Route path="packages" element={<PackagesPage />} />
           <Route path="destinations" element={<DestinationsPage />} />
           <Route path="about" path="about" element={<AboutPage />} />
+          <Route path="contact" element={<ContactPage />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<DashboardPage />} />

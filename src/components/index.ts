@@ -6,3 +6,5 @@ export { AuthCard } from './auth/AuthCard';
 export { LoginForm } from './auth/LoginForm';
 export { RegisterForm } from './auth/RegisterForm';
 export { PageTransition } from './PageTransition';
+export { ContactForm, ContactInfo, TravelFeatures } from './contact';
+export { AboutHero, AboutStats, AboutStory, AboutValues, AboutTeam } from './about';
