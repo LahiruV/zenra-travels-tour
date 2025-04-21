@@ -1,5 +1,5 @@
 import { Hero } from '@zenra/components'
-import { FeaturedDestinations, Experiences, CustomerExperience, CallToAction } from '@zenra/components';
+import { FeaturedDestinations, Experiences, CustomerExperience, CallToAction, PopularPackages, ImageGallery } from '@zenra/components';
 import { PageTransition } from '@zenra/components';
 
 export const HomePage = () => {
@@ -7,6 +7,8 @@ export const HomePage = () => {
     <PageTransition>
       <Hero />
       <FeaturedDestinations />
+      <PopularPackages />
+      <ImageGallery />
       <Experiences />
       <CustomerExperience />
       <CallToAction />

@@ -42,26 +42,6 @@ export const destinations = {
         'Nature Walks'
       ]
     },
-    unawatuna: {
-      name: 'Unawatuna',
-      region: 'Southern Province',
-      description: 'A picturesque beach destination known for its coral reefs, sea turtles, and laid-back atmosphere.',
-      bestTime: 'November to April',
-      highlights: [
-        'Golden Sandy Beach',
-        'Coral Reefs',
-        'Japanese Peace Pagoda',
-        'Beach Restaurants',
-        'Jungle Beach'
-      ],
-      activities: [
-        'Snorkeling',
-        'Scuba Diving',
-        'Beach Relaxation',
-        'Surfing',
-        'Yoga'
-      ]
-    },
     ella: {
       name: 'Ella',
       region: 'Uva Province',
@@ -80,46 +60,6 @@ export const destinations = {
         'Train Journeys',
         'Photography',
         'Waterfall Visits'
-      ]
-    },
-    weligama: {
-      name: 'Weligama',
-      region: 'Southern Province',
-      description: 'A charming coastal town famous for its stilt fishermen, surfing spots, and laid-back beach culture.',
-      bestTime: 'December to April',
-      highlights: [
-        'Traditional Stilt Fishing',
-        'Surfing Beaches',
-        'Fish Market',
-        'Taprobane Island',
-        'Local Cinnamon Estates'
-      ],
-      activities: [
-        'Surfing Lessons',
-        'Stilt Fishing Photography',
-        'Beach Hopping',
-        'Cooking Classes',
-        'Boat Tours'
-      ]
-    },
-    anuradhapura: {
-      name: 'Anuradhapura',
-      region: 'North Central Province',
-      description: 'Ancient capital city with well-preserved ruins of Sri Lankan civilization, featuring stunning stupas and religious monuments.',
-      bestTime: 'May to September',
-      highlights: [
-        'Sri Maha Bodhi Tree',
-        'Ruwanwelisaya Stupa',
-        'Jetavanaramaya',
-        'Abhayagiri Monastery',
-        'Isurumuniya Temple'
-      ],
-      activities: [
-        'Historical Tours',
-        'Temple Visits',
-        'Cycling Tours',
-        'Meditation Sessions',
-        'Archaeological Walks'
       ]
     },
     galle: {
@@ -142,30 +82,30 @@ export const destinations = {
         'Cultural Photography'
       ]
     },
-    arugambay: {
-      name: 'Arugam Bay',
-      region: 'Eastern Province',
-      description: 'World-renowned surfing destination with beautiful beaches and vibrant beach culture.',
-      bestTime: 'April to October',
+    unawatuna: {
+      name: 'Unawatuna',
+      region: 'Southern Province',
+      description: 'A picturesque beach destination known for its coral reefs, sea turtles, and laid-back atmosphere.',
+      bestTime: 'November to April',
       highlights: [
-        'Main Point Break',
-        'Pottuvil Point',
-        'Elephant Rock',
-        'Whiskey Point',
-        'Lagoon Safari'
+        'Golden Sandy Beach',
+        'Coral Reefs',
+        'Japanese Peace Pagoda',
+        'Beach Restaurants',
+        'Jungle Beach'
       ],
       activities: [
+        'Snorkeling',
+        'Scuba Diving',
+        'Beach Relaxation',
         'Surfing',
-        'Yoga Sessions',
-        'Wildlife Safaris',
-        'Beach Parties',
-        'Lagoon Tours'
+        'Yoga'
       ]
     },
     colombo: {
       name: 'Colombo',
       region: 'Western Province',
-      description: 'The commercial capital of Sri Lanka, blending modern lifestyle with colonial heritage.',
+      description: 'The vibrant capital city blending modern luxury with colonial heritage, offering diverse shopping and cultural experiences.',
       bestTime: 'January to March',
       highlights: [
         'Galle Face Green',
@@ -185,7 +125,7 @@ export const destinations = {
     negombo: {
       name: 'Negombo',
       region: 'Western Province',
-      description: 'Coastal town known for its fishing industry, beach life, and Dutch colonial heritage.',
+      description: 'A charming coastal town known for its fishing industry, golden beaches, and Dutch colonial heritage.',
       bestTime: 'December to April',
       highlights: [
         'Fish Market',
@@ -200,6 +140,66 @@ export const destinations = {
         'Canal Boat Rides',
         'Seafood Dining',
         'Church Visits'
+      ]
+    },
+    weligama: {
+      name: 'Weligama',
+      region: 'Southern Province',
+      description: 'A picturesque bay famous for its stilt fishermen, surfing spots, and traditional fishing culture.',
+      bestTime: 'December to March',
+      highlights: [
+        'Stilt Fishermen',
+        'Surfing Beaches',
+        'Taprobane Island',
+        'Fish Market',
+        'Kushta Raja Gala'
+      ],
+      activities: [
+        'Surfing',
+        'Photography',
+        'Fishing Village Tours',
+        'Cooking Classes',
+        'Beach Hopping'
+      ]
+    },
+    anuradhapura: {
+      name: 'Anuradhapura',
+      region: 'North Central Province',
+      description: 'Ancient capital city with well-preserved ruins of Sri Lankan civilization, featuring stunning stupas and religious monuments.',
+      bestTime: 'May to September',
+      highlights: [
+        'Sri Maha Bodhi Tree',
+        'Ruwanwelisaya Stupa',
+        'Jetavanaramaya',
+        'Abhayagiri Monastery',
+        'Isurumuniya Temple'
+      ],
+      activities: [
+        'Historical Tours',
+        'Temple Visits',
+        'Cycling Tours',
+        'Meditation Sessions',
+        'Archaeological Walks'
+      ]
+    },
+    arugambay: {
+      name: 'Arugam Bay',
+      region: 'Eastern Province',
+      description: 'World-renowned surfing destination with beautiful beaches, vibrant beach culture, and stunning coastal landscapes.',
+      bestTime: 'April to October',
+      highlights: [
+        'Main Point Break',
+        'Pottuvil Point',
+        'Elephant Rock',
+        'Whiskey Point',
+        'Lagoon Safari'
+      ],
+      activities: [
+        'Surfing',
+        'Yoga Sessions',
+        'Wildlife Safaris',
+        'Beach Parties',
+        'Lagoon Tours'
       ]
     }
   }
