@@ -7,11 +7,11 @@ import { Navigate } from 'react-router-dom'
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { user, isAuthenticated } = useAppSelector(state => state.auth);
-  
+
   if (!isAuthenticated || user?.role !== 'admin') {
     return <Navigate to="/login" />;
   }
-  
+
   return <>{children}</>;
 };
 
@@ -29,8 +29,8 @@ function App() {
           <Route path="contact" element={<ContactPage />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
-            <Route index element={<DashboardPage />} />
-            <Route path="bookings" element={<BookingsPage />} />
+          <Route index element={<DashboardPage />} />
+          <Route path="bookings" element={<BookingsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

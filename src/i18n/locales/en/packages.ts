@@ -5,7 +5,7 @@ export const packages = {
     culturalHeritage: {
       title: "Cultural Heritage Tour",
       description: "Explore ancient temples, historical sites, and traditional villages.",
-      image: "https://images.unsplash.com/photo-1625467096769-fdd3ffac8c6e?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.pexels.com/photos/19759365/pexels-photo-19759365/free-photo-of-buddha-statues-at-gangaramaya-temple-in-colombo-sri-lanka.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       price: 1299,
       duration: "6 Days",
       groupSize: "Max 12 people",
@@ -14,7 +14,7 @@ export const packages = {
     beachParadise: {
       title: "Beach Paradise Escape",
       description: "Relax on pristine beaches and enjoy water sports activities.",
-      image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.pexels.com/photos/5549239/pexels-photo-5549239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       price: 999,
       duration: "5 Days",
       groupSize: "Max 10 people",
@@ -23,7 +23,7 @@ export const packages = {
     wildlifeSafari: {
       title: "Wildlife Safari Adventure",
       description: "Encounter elephants, leopards, and exotic birds in their natural habitat.",
-      image: "https://images.unsplash.com/photo-1562698013-ac13558052cd?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.pexels.com/photos/17281950/pexels-photo-17281950/free-photo-of-elephants-among-trees.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       price: 1499,
       duration: "7 Days",
       groupSize: "Max 8 people",

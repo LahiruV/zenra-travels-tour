@@ -7,15 +7,15 @@ interface TravelFeature {
 
 const features: TravelFeature[] = [
   {
-    image: "https://images.unsplash.com/photo-1596627116790-af6f46dddbae?q=80&w=640&auto=format&fit=crop",
+    image: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     key: "accommodations"
   },
   {
-    image: "https://images.unsplash.com/photo-1625467096769-fdd3ffac8c6e?q=80&w=640&auto=format&fit=crop",
+    image: "https://images.pexels.com/photos/31032898/pexels-photo-31032898/free-photo-of-vibrant-sri-lankan-art-in-galle-market.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     key: "cultural"
   },
   {
-    image: "https://images.unsplash.com/photo-1562698013-ac13558052cd?q=80&w=640&auto=format&fit=crop",
+    image: "https://images.pexels.com/photos/19073540/pexels-photo-19073540/free-photo-of-peacock-showing-its-majestic-tail.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     key: "wildlife"
   }
 ];

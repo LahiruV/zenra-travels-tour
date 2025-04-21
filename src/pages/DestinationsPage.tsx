@@ -14,35 +14,35 @@ const destinationIds = [
   },
   {
     id: 'unawatuna',
-    image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 'ella',
-    image: "https://images.unsplash.com/photo-1586033921061-25b5f082f3e1?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.pexels.com/photos/2403209/pexels-photo-2403209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 'weligama',
-    image: "https://images.unsplash.com/photo-1586861203927-800a5acdcc4d?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1520242279429-1f64b18816ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 'anuradhapura',
-    image: "https://images.unsplash.com/photo-1625467096769-fdd3ffac8c6e?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1659244352464-75e539618056?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 'galle',
-    image: "https://images.unsplash.com/photo-1586598198321-9735fd52455b?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.pexels.com/photos/27669343/pexels-photo-27669343/free-photo-of-a-building-with-arched-windows-and-arched-columns.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 'arugambay',
-    image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.pexels.com/photos/1654489/pexels-photo-1654489.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 'colombo',
-    image: "https://images.unsplash.com/photo-1590677197180-1c1bac219562?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1565135382393-c100c8b0a129?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 'negombo',
-    image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=2000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1561150018-8bb356679537?q=80&w=2044&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   }
 ];
 

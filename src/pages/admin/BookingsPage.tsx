@@ -13,7 +13,6 @@ import {
 import { EyeIcon, PencilIcon, TrashIcon } from '@heroicons/react/24/outline';
 import { Booking, Column } from '@zenra/models';
 import { TextField, Table } from '@zenra/widgets';
-import { useNavigate } from 'react-router-dom';
 
 const mockBookings: Booking[] = [
   {
