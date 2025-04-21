@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 
-export const AboutHero = () => {
+export const ContactHero = () => {
   const { t } = useTranslation();
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
-    const video = document.getElementById('about-hero-video') as HTMLVideoElement;
+    const video = document.getElementById('contact-hero-video') as HTMLVideoElement;
     if (video) {
       video.play().catch(error => console.log('Auto-play prevented:', error));
     }
@@ -18,7 +18,7 @@ export const AboutHero = () => {
       className="relative h-[400px] overflow-hidden"
     >
       <video
-        id="about-hero-video"
+        id="contact-hero-video"
         className="absolute top-0 left-0 w-full h-full object-cover"
         autoPlay
         muted
@@ -26,7 +26,7 @@ export const AboutHero = () => {
         playsInline
         onLoadedData={() => setIsVideoLoaded(true)}
       >
-        <source src="https://cdn.pixabay.com/video/2023/11/29/191283-889685028_large.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/29330747/12643221_2560_1440_60fps.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-50" />
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4 max-w-6xl mx-auto">
@@ -36,7 +36,7 @@ export const AboutHero = () => {
           animate={{ opacity: isVideoLoaded ? 1 : 0, y: isVideoLoaded ? 0 : 20 }}
           transition={{ duration: 0.6 }}
         >
-          {t('about.hero.title')}
+          {t('contact.hero.title')}
         </motion.h1>
         <motion.p 
           className="text-xl text-center max-w-2xl"
@@ -44,7 +44,7 @@ export const AboutHero = () => {
           animate={{ opacity: isVideoLoaded ? 1 : 0, y: isVideoLoaded ? 0 : 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {t('about.hero.subtitle')}
+          {t('contact.hero.subtitle')}
         </motion.p>
       </div>
     </div>
