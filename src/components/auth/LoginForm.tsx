@@ -1,9 +1,7 @@
 import { TextField, Button } from '@zenra/widgets';
 import { EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/outline';
-import { useAppDispatch } from '@zenra/store';
 
 export const LoginForm = () => {
-  const dispatch = useAppDispatch();
 
   return (
     <form className="space-y-6">

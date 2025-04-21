@@ -1,4 +1,4 @@
-import { AuthCard, LoginForm } from '@zenra/components';
+import { LoginForm } from '@zenra/components';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -17,11 +17,11 @@ export const LoginPage = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-blue-900 bg-opacity-30" />
-        <motion.div 
+        <motion.div
           className="absolute bottom-0 left-0 right-0 p-8 text-white"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        // initial={{ opacity: 0, y: 20 }}
+        // animate={{ opacity: 1, y: 0 }}
+        // transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl font-bold mb-2">{t('auth.login.imageTitle')}</h2>
           <p className="text-lg">{t('auth.login.imageSubtitle')}</p>
@@ -32,9 +32,9 @@ export const LoginPage = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-gray-50">
         <motion.div
           className="w-full max-w-md"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+        // initial={{ opacity: 0, x: 20 }}
+        // animate={{ opacity: 1, x: 0 }}
+        // transition={{ duration: 0.8 }}
         >
           <div className="text-center mb-8">
             <Link

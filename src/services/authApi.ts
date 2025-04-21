@@ -1,44 +1,33 @@
 import { useMutation } from '@tanstack/react-query';
-import { LoginCredentials, RegisterCredentials, AuthResponse } from '@zenra/models';
+import { LoginCredentials, RegisterCredentials, DefaultResponse } from '@zenra/models';
+import axios, { AxiosError } from 'axios';
+
 
 export const useLogin = () => {
-  return useMutation({
-    mutationFn: async (credentials: LoginCredentials): Promise<AuthResponse> => {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(credentials),
-      });
-
-      if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message || 'Failed to login');
-      }
-
-      return response.json();
+  const { mutate: loginMutate } = useMutation({
+    mutationFn: async (payload: LoginCredentials) => {
+      const response = await axios.post<DefaultResponse>(`${import.meta.env.VITE_API_URL}/auth/register`, payload);
+      return response.data;
     },
+    onSuccess: (response: DefaultResponse) => response,
+    onError: (err: AxiosError) => err,
   });
+  return {
+    loginMutate,
+  };
 };
+
 
 export const useRegister = () => {
-  return useMutation({
-    mutationFn: async (credentials: RegisterCredentials): Promise<AuthResponse> => {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/register`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(credentials),
-      });
-
-      if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message || 'Failed to register');
-      }
-
-      return response.json();
+  const { mutate: registerMutate } = useMutation({
+    mutationFn: async (payload: RegisterCredentials) => {
+      const response = await axios.post<DefaultResponse>(`${import.meta.env.VITE_API_URL}/auth/register`, payload);
+      return response.data;
     },
+    onSuccess: (response: DefaultResponse) => response,
+    onError: (err: AxiosError) => err,
   });
-};
+  return {
+    registerMutate,
+  };
+}

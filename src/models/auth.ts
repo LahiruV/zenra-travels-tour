@@ -7,6 +7,7 @@ export interface RegisterCredentials {
   name: string;
   email: string;
   password: string;
+  role: 'user' | 'admin';
 }
 
 export interface AuthResponse {
