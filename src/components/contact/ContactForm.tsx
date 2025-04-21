@@ -37,7 +37,7 @@ export const ContactForm = () => {
       <h2 className="text-2xl font-semibold text-gray-900 mb-6">
         {t('contact.form.title')}
       </h2>
-      
+
       <form onSubmit={handleSubmit} className="space-y-6">
         <TextField
           label={t('contact.form.name')}
@@ -79,6 +79,7 @@ export const ContactForm = () => {
         />
 
         <Button
+          style={{ marginTop: '90px' }}
           type="submit"
           variant="primary"
           size="large"

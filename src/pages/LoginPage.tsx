@@ -82,7 +82,7 @@ export const LoginPage = () => {
               className="inline-flex items-center text-gray-600 hover:text-blue-600 transition-colors mb-4"
             >
               <ArrowLeftIcon className="h-5 w-5 mr-2" />
-              <span>{t('common.backToHome')}</span>
+              <span>{t('backToHome')}</span>
             </Link>
             <h2 className="text-3xl font-bold text-gray-900">{t('auth.login.title')}</h2>
             <p className="mt-2 text-gray-600">
