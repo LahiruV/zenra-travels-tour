@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { COMPANY_NAME } from '@zenra/constants';
 import { useTranslation } from 'react-i18next';
 
 export const AboutHero = () => {

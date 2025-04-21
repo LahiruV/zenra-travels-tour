@@ -24,10 +24,9 @@ const navigation = [
 
 interface SidebarProps {
   isOpen: boolean;
-  onClose: () => void;
 }
 
-export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
+export const Sidebar = ({ isOpen }: SidebarProps) => {
   const location = useLocation();
 
   return (

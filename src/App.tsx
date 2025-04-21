@@ -1,18 +1,13 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { MainLayout, AdminLayout } from './layout'
-import { HomePage, AboutPage, LoginPage, RegisterPage, PackagesPage, DestinationsPage, ContactPage, DashboardPage, BookingsPage } from '@zenra/pages'
+import { HomePage, AboutPage, LoginPage, RegisterPage, PackagesPage, DestinationsPage, ContactPage, DashboardPage, BookingsPage } from '@zenra/pages' 
 import { useAppSelector } from '@zenra/store'
 import { Navigate } from 'react-router-dom'
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { user, isAuthenticated } = useAppSelector(state => state.auth);
-
-  if (!isAuthenticated || user?.role !== 'admin') {
-    return <Navigate to="/login" />;
-  }
-
-  return <>{children}</>;
+  return !isAuthenticated || user?.role !== 'admin' ? <Navigate to="/login" /> : <>{children}</>;
 };
 
 function App() {
@@ -25,12 +20,12 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="packages" element={<PackagesPage />} />
           <Route path="destinations" element={<DestinationsPage />} />
-          <Route path="about" path="about" element={<AboutPage />} />
+          <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
-          <Route index element={<DashboardPage />} />
-          <Route path="bookings" element={<BookingsPage />} />
+          <Route index element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
+          <Route path="bookings" element={<ProtectedRoute><BookingsPage /></ProtectedRoute>} />
         </Route>
       </Routes>
     </BrowserRouter>

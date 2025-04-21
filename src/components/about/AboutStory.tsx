@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { COMPANY_NAME } from '@zenra/constants';
 import { useTranslation } from 'react-i18next';
 
 export const AboutStory = () => {
@@ -14,7 +13,7 @@ export const AboutStory = () => {
       >
         <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('about.story.title')}</h2>
         <div className="prose prose-lg">
-          {t('about.story.content', { returnObjects: true }).map((paragraph, index) => (
+          {t<string[]>('about.story.content', { returnObjects: true }).map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>
@@ -26,7 +25,7 @@ export const AboutStory = () => {
       >
         <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('about.mission.title')}</h2>
         <div className="prose prose-lg">
-          {t('about.mission.content', { returnObjects: true }).map((paragraph, index) => (
+          {t<string[]>('about.mission.content', { returnObjects: true }).map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>

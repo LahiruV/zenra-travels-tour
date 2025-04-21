@@ -9,6 +9,11 @@ export const DestinationCard = ({ id, image }: DestinationCardProps) => {
   const { t } = useTranslation();
   const location = `destinations.locations.${id}`;
 
+  const getTranslatedArray = (key: string): string[] => {
+    const value = t(`${location}.${key}`, { returnObjects: true });
+    return Array.isArray(value) ? value : [];
+  };
+
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
       <img
@@ -32,7 +37,7 @@ export const DestinationCard = ({ id, image }: DestinationCardProps) => {
         <div className="mb-6">
           <h3 className="font-semibold text-gray-900 mb-2">Highlights</h3>
           <div className="flex flex-wrap gap-2">
-            {t(`${location}.highlights`, { returnObjects: true }).map((highlight: string, index: number) => (
+            {getTranslatedArray('highlights').map((highlight: string, index: number) => (
               <span
                 key={index}
                 className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full"
@@ -46,7 +51,7 @@ export const DestinationCard = ({ id, image }: DestinationCardProps) => {
         <div>
           <h3 className="font-semibold text-gray-900 mb-2">Activities</h3>
           <div className="flex flex-wrap gap-2">
-            {t(`${location}.activities`, { returnObjects: true }).map((activity: string, index: number) => (
+            {getTranslatedArray('activities').map((activity: string, index: number) => (
               <span
                 key={index}
                 className="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full"

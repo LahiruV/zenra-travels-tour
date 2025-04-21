@@ -1,7 +1,5 @@
 import { Bars3Icon, BellIcon } from '@heroicons/react/24/outline';
 import { Button } from '@zenra/widgets';
-import { useAppDispatch } from '@zenra/store';
-// import { logout } from '@zenra/store';
 import { useNavigate } from 'react-router-dom';
 
 interface HeaderProps {
@@ -9,11 +7,9 @@ interface HeaderProps {
 }
 
 export const Header = ({ onMenuClick }: HeaderProps) => {
-  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // dispatch(logout());
     navigate('/login');
   };
 
