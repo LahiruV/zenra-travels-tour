@@ -2,7 +2,7 @@ export const home = {
   hero: {
     title: 'Discover Sri Lanka',
     subtitle: 'Experience the pearl of the Indian Ocean - where ancient wonders meet tropical paradise',
-    exploreButton: 'Explore Packages'
+    exploreButton: 'Explore Our Packages'
   },
   experiences: {
     title: 'Unforgettable Experiences',
@@ -42,7 +42,24 @@ export const home = {
   },
   testimonials: {
     title: 'What Our Travelers Say',
-    subtitle: 'Real experiences from real travelers'
+    subtitle: 'Real experiences from real travelers',
+    feedback: {
+      sarah: {
+        name: 'Sarah Johnson',
+        country: 'United States',
+        comment: 'Our trip to Sri Lanka was absolutely magical! The cultural tours and wildlife safaris exceeded all expectations.'
+      },
+      david: {
+        name: 'David Chen',
+        country: 'Singapore',
+        comment: 'The beaches were pristine and the local cuisine was amazing. Our honeymoon was unforgettable.'
+      },
+      emma: {
+        name: 'Emma Watson',
+        country: 'United Kingdom',
+        comment: 'From tea plantations to ancient temples, every day was a new adventure. Highly recommend!'
+      }
+    }
   },
   cta: {
     title: 'Ready to Experience Sri Lanka?',

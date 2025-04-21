@@ -1,34 +1,26 @@
-import { StarIcon } from '@heroicons/react/24/solid';
 import { AnimatedSection } from './AnimatedSection';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { StarIcon } from '@heroicons/react/24/solid';
 
 export const CustomerExperience = () => {
   const { t } = useTranslation();
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      country: "United States",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop",
-      comment: "Our trip to Sri Lanka was absolutely magical! The cultural tours and wildlife safaris exceeded all expectations.",
-      rating: 5
-    },
-    {
-      name: "David Chen",
-      country: "Singapore",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
-      comment: "The beaches were pristine and the local cuisine was amazing. Our honeymoon was unforgettable.",
-      rating: 5
-    },
-    {
-      name: "Emma Watson",
-      country: "United Kingdom",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop",
-      comment: "From tea plantations to ancient temples, every day was a new adventure. Highly recommend!",
-      rating: 5
-    }
-  ];
+  const feedbackKeys = ['sarah', 'david', 'emma'];
+  
+  const images = {
+    sarah: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop",
+    david: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
+    emma: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop"
+  };
+
+  const testimonials = feedbackKeys.map(key => ({
+    name: t(`home.testimonials.feedback.${key}.name`),
+    country: t(`home.testimonials.feedback.${key}.country`),
+    image: images[key as keyof typeof images],
+    comment: t(`home.testimonials.feedback.${key}.comment`),
+    rating: 5
+  }));
 
   return (
     <section className="py-16 bg-white">
