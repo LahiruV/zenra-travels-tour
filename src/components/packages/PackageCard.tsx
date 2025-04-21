@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button, Modal } from '@zenra/widgets';
 import { CalendarDaysIcon, ClockIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 import { Package, BookingFormData } from '@zenra/models';
+import { useTranslation } from 'react-i18next';
 import { BookingForm } from './BookingForm';
 
 export const PackageCard = ({ 
@@ -15,6 +16,7 @@ export const PackageCard = ({
   startDate,
 }: Package) => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const { t } = useTranslation();
 
   const handleBooking = async (bookingData: BookingFormData) => {
     try {
@@ -54,15 +56,15 @@ export const PackageCard = ({
         </div>
 
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-blue-600">
-            ${price}
-            <span className="text-sm text-gray-500 font-normal">/person</span>
+          <div className="text-2xl font-bold text-primary flex items-baseline">
+            <span>${price}</span>
+            <span className="text-sm text-text/60 font-normal ml-1">{t('packages.booking.form.perPerson')}</span>
           </div>
           <Button 
             variant="primary"
             onClick={() => setIsBookingModalOpen(true)}
           >
-            Book Now
+            {t('packages.booking.form.submit')}
           </Button>
         </div>
       </div>

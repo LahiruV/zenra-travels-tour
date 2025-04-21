@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import { Snackbar } from '@zenra/widgets';
 import { RegisterCredentials } from '@zenra/models';
 import { useLogin } from '@zenra/services';
 
@@ -14,26 +15,57 @@ export const RegisterPage = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
+  const [notification, setNotification] = useState({
+    open: false,
+    message: '',
+    type: 'success' as const
+  });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const handleCloseNotification = () => {
+    setNotification(prev => ({ ...prev, open: false }));
+  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
     setError('');
+
+    if (password !== confirmPassword) {
+      setNotification({
+        open: true,
+        message: 'Passwords do not match',
+        type: 'error'
+      });
+      setLoading(false);
+      return;
+    }
+
     const payload: RegisterCredentials = {
       name,
       email,
       password,
       role: 'user'
     };
+
     loginMutate(payload, {
       onSuccess: (response) => {
         setLoading(false);
+        setNotification({
+          open: true,
+          message: 'Registration successful! Welcome aboard.',
+          type: 'success'
+        });
         console.log('Registration successful:', response);
       },
       onError: (error) => {
         setLoading(false);
+        setNotification({
+          open: true,
+          message: 'Registration failed. Please try again.',
+          type: 'error'
+        });
         setError('Registration failed. Please try again.');
         console.error('Registration error:', error);
       },
@@ -113,6 +145,12 @@ export const RegisterPage = () => {
           </div>
         </motion.div>
       </div>
+      <Snackbar
+        open={notification.open}
+        message={notification.message}
+        type={notification.type}
+        onClose={handleCloseNotification}
+      />
     </div>
   );
 };

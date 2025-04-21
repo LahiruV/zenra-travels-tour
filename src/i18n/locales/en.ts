@@ -10,6 +10,95 @@ export const en = {
     login: 'Login',
     register: 'Register'
   },
+  about: {
+    hero: {
+      title: 'About Us',
+      subtitle: 'Your trusted partner in creating unforgettable journeys since 2010'
+    },
+    stats: {
+      experience: {
+        value: '15+',
+        label: 'Years of Experience'
+      },
+      travelers: {
+        value: '50K+',
+        label: 'Happy Travelers'
+      },
+      destinations: {
+        value: '100+',
+        label: 'Destinations'
+      },
+      guides: {
+        value: '50+',
+        label: 'Local Guides'
+      }
+    },
+    story: {
+      title: 'Our Story',
+      content: [
+        'Founded in 2010, our company emerged from a simple yet powerful vision: to showcase the breathtaking beauty and rich cultural heritage of Sri Lanka to the world. What started as a small team of travel enthusiasts has grown into a leading tourism company trusted by thousands of travelers worldwide.',
+        'Our journey has been marked by countless memorable moments, satisfied clients, and strong partnerships with local communities. We\'ve grown not just in size, but in our understanding of what makes travel truly special.'
+      ]
+    },
+    mission: {
+      title: 'Our Mission',
+      content: [
+        'Our mission is to create transformative journeys that inspire, educate, and connect people with the heart and soul of Sri Lanka. We believe that travel has the power to broaden horizons, foster cultural understanding, and create lasting positive impact.',
+        'We are committed to sustainable tourism practices that benefit local communities while preserving Sri Lanka\'s natural beauty and cultural heritage for future generations.'
+      ]
+    },
+    values: {
+      title: 'Our Values',
+      items: {
+        trust: {
+          title: 'Trust & Reliability',
+          description: 'We maintain the highest standards of service and transparency in all our operations.'
+        },
+        sustainability: {
+          title: 'Sustainable Tourism',
+          description: 'Commitment to eco-friendly practices and supporting local communities.'
+        },
+        personal: {
+          title: 'Personal Touch',
+          description: 'Every journey is tailored to your preferences and travel style.'
+        },
+        excellence: {
+          title: 'Excellence',
+          description: 'Continuous pursuit of exceeding expectations in service quality.'
+        }
+      }
+    },
+    team: {
+      title: 'Our Team',
+      members: {
+        sarah: {
+          name: 'Sarah Johnson',
+          role: 'CEO & Founder',
+          description: 'A pioneer in travel with 15 years of experience in luxury tourism.'
+        },
+        michael: {
+          name: 'Michael Chen',
+          role: 'Operations Director',
+          description: 'Expert in orchestrating seamless travel experiences across Asia.'
+        },
+        emily: {
+          name: 'Emily Rodriguez',
+          role: 'Travel Curator',
+          description: 'Specialist in cultural immersion and authentic local experiences.'
+        },
+        david: {
+          name: 'David Kumar',
+          role: 'Local Tour Expert',
+          description: 'Born and raised in Sri Lanka, sharing local insights since 2010.'
+        },
+        sophia: {
+          name: 'Sophia Lee',
+          role: 'Client Relations Manager',
+          description: 'Dedicated to creating memorable moments and exceeding expectations.'
+        }
+      }
+    }
+  },
   destinations: {
     title: 'Discover Sri Lanka\'s Most Beautiful Places',
     subtitle: 'From ancient cities to pristine beaches, explore the diverse destinations of this tropical paradise',
@@ -193,5 +282,137 @@ export const en = {
       address: 'Address: 123 Travel Street'
     },
     rights: 'All rights reserved.'
+  },
+  contact: {
+    hero: {
+      title: 'Contact Us',
+      subtitle: 'Let us help you plan your perfect Sri Lankan adventure'
+    },
+    description: 'Whether you\'re dreaming of pristine beaches, ancient temples, or wildlife safaris, our travel experts are here to help create your perfect journey',
+    form: {
+      title: 'Send us a Message',
+      name: 'Full Name',
+      email: 'Email',
+      phone: 'Phone',
+      message: {
+        label: 'Message',
+        placeholder: 'Tell us about your travel plans and any specific requirements'
+      },
+      submit: 'Send Message'
+    },
+    info: {
+      title: 'Our Contact Information',
+      address: {
+        label: 'Address',
+        value: '45 Galle Face Terrace\nColombo 03\nSri Lanka'
+      },
+      phone: {
+        label: 'Phone',
+        local: 'Local: +94 11 234 5678',
+        international: 'International: +1 (555) 123-4567'
+      },
+      email: {
+        label: 'Email',
+        bookings: 'Bookings: bookings@zenratravels.com',
+        support: 'Support: support@zenratravels.com'
+      },
+      hours: {
+        label: 'Business Hours',
+        weekdays: 'Monday - Friday: 9:00 AM - 6:00 PM',
+        saturday: 'Saturday: 10:00 AM - 4:00 PM',
+        sunday: 'Sunday: Closed'
+      },
+      languages: {
+        label: 'Languages',
+        value: 'English, Sinhala, Tamil, French, German'
+      }
+    },
+    features: {
+      accommodations: {
+        title: 'Luxury Accommodations',
+        description: 'Experience world-class hospitality in carefully selected resorts and hotels'
+      },
+      cultural: {
+        title: 'Cultural Experiences',
+        description: 'Immerse yourself in Sri Lanka\'s rich cultural heritage and traditions'
+      },
+      wildlife: {
+        title: 'Wildlife Adventures',
+        description: 'Encounter majestic wildlife in their natural habitats'
+      }
+    }
+  },
+  packages: {
+    title: 'Explore Our Packages',
+    subtitle: 'Discover our carefully curated travel packages for an unforgettable Sri Lankan experience',
+    items: {
+      culturalHeritage: {
+        title: "Cultural Heritage Tour",
+        description: "Explore ancient temples, historical sites, and traditional villages.",
+        image: "https://images.unsplash.com/photo-1625467096769-fdd3ffac8c6e?q=80&w=800&auto=format&fit=crop",
+        price: 1299,
+        duration: "6 Days",
+        groupSize: "Max 12 people",
+        startDate: "Available year-round"
+      },
+      beachParadise: {
+        title: "Beach Paradise Escape",
+        description: "Relax on pristine beaches and enjoy water sports activities.",
+        image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=800&auto=format&fit=crop",
+        price: 999,
+        duration: "5 Days",
+        groupSize: "Max 10 people",
+        startDate: "Available year-round"
+      },
+      wildlifeSafari: {
+        title: "Wildlife Safari Adventure",
+        description: "Encounter elephants, leopards, and exotic birds in their natural habitat.",
+        image: "https://images.unsplash.com/photo-1562698013-ac13558052cd?q=80&w=800&auto=format&fit=crop",
+        price: 1499,
+        duration: "7 Days",
+        groupSize: "Max 8 people",
+        startDate: "Available year-round"
+      }
+    },
+    filters: {
+      duration: {
+        label: 'Duration',
+        all: 'All Durations',
+        short: '1-3 Days',
+        medium: '4-7 Days',
+        long: '8+ Days'
+      },
+      price: {
+        label: 'Price Range',
+        all: 'All Prices',
+        budget: '$0 - $1,000',
+        standard: '$1,000 - $2,000',
+        luxury: '$2,000+'
+      }
+    },
+    booking: {
+      title: 'Book Your Trip',
+      form: {
+        firstName: 'First Name',
+        lastName: 'Last Name',
+        email: 'Email',
+        phone: 'Phone',
+        travelDate: 'Travel Date',
+        adults: 'Number of Adults',
+        children: 'Number of Children',
+        services: {
+          title: 'Additional Services',
+          meals: 'Include Meals',
+          transport: 'Include Transport',
+          accommodation: 'Include Accommodation'
+        },
+        specialRequests: {
+          label: 'Special Requests',
+          placeholder: 'Optional: Any dietary requirements or special accommodations'
+        },
+        submit: 'Book Now',
+        perPerson: '/person'
+      }
+    }
   }
 };

@@ -1,0 +1,17 @@
+import { home } from './home';
+import { about } from './about';
+import { contact } from './contact';
+import { common } from './common';
+import { auth } from './auth';
+import { packages } from './packages';
+import { destinations } from './destinations';
+
+export const ru = {
+  ...common,
+  home,
+  about,
+  contact,
+  auth,
+  packages,
+  destinations,
+};

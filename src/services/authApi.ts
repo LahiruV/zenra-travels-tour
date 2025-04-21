@@ -6,7 +6,7 @@ import axios, { AxiosError } from 'axios';
 export const useLogin = () => {
   const { mutate: loginMutate } = useMutation({
     mutationFn: async (payload: LoginCredentials) => {
-      const response = await axios.post<DefaultResponse>(`${import.meta.env.VITE_API_URL}/auth/register`, payload);
+      const response = await axios.post<DefaultResponse>(`${import.meta.env.VITE_API_URL}/auth/login`, payload);
       return response.data;
     },
     onSuccess: (response: DefaultResponse) => response,

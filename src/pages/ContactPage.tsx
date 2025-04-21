@@ -18,9 +18,9 @@ export const ContactPage = () => {
             <div className="absolute inset-0 bg-blue-900 bg-opacity-40" />
             <div className="relative h-full flex items-center justify-center text-center z-10 px-4">
               <div>
-                <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
+                <h1 className="text-4xl font-bold text-white mb-4">{t('contact.hero.title')}</h1>
                 <p className="text-xl text-white max-w-2xl">
-                  Let us help you plan your perfect Sri Lankan adventure
+                  {t('contact.hero.subtitle')}
                 </p>
               </div>
             </div>
@@ -28,8 +28,7 @@ export const ContactPage = () => {
 
           <div className="text-center mb-12">
             <p className="text-xl text-gray-600">
-              Whether you're dreaming of pristine beaches, ancient temples, or wildlife safaris,
-              our travel experts are here to help create your perfect journey
+              {t('contact.description')}
             </p>
           </div>
 

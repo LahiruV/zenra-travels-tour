@@ -14,8 +14,15 @@ export const Button = ({
   return (
     <MuiButton
       {...props}
+      sx={{
+        backgroundColor: variant === 'primary' ? '#0096C7' : variant === 'secondary' ? '#FF6B6B' : 'transparent',
+        color: variant === 'outline' || variant === 'text' ? '#0096C7' : '#FFFFFF',
+        borderColor: variant === 'outline' ? '#0096C7' : 'transparent',
+        '&:hover': {
+          backgroundColor: variant === 'primary' ? '#0077A0' : variant === 'secondary' ? '#FF5252' : 'rgba(0, 150, 199, 0.1)',
+        }
+      }}
       variant={variant === 'outline' ? 'outlined' : variant === 'text' ? 'text' : 'contained'}
-      color={variant === 'primary' ? 'primary' : 'secondary'}
       size={size}
       fullWidth={fullWidth}
       disabled={loading}

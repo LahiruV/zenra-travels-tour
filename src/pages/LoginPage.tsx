@@ -2,10 +2,50 @@ import { LoginForm } from '@zenra/components';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import { Snackbar } from '@zenra/widgets';
+import { LoginCredentials } from '@zenra/models';
+import { useLogin } from '@zenra/services';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 export const LoginPage = () => {
   const { t } = useTranslation();
+  const { loginMutate } = useLogin();
+  const [notification, setNotification] = useState({
+    open: false,
+    message: '',
+    type: 'success' as const
+  });
+
+  const handleCloseNotification = () => {
+    setNotification(prev => ({ ...prev, open: false }));
+  };
+
+  const handleLogin = async (email: string, password: string) => {
+    const payload: LoginCredentials = {
+      email,
+      password
+    };
+
+    loginMutate(payload, {
+      onSuccess: (response) => {
+        setNotification({
+          open: true,
+          message: 'Login successful! Welcome back.',
+          type: 'success'
+        });
+        console.log('Login successful:', response);
+      },
+      onError: (error) => {
+        setNotification({
+          open: true,
+          message: 'Login failed. Please check your credentials.',
+          type: 'error'
+        });
+        console.error('Login error:', error);
+      },
+    });
+  };
 
   return (
     <div className="min-h-screen flex">
@@ -53,10 +93,16 @@ export const LoginPage = () => {
             </p>
           </div>
           <div className="bg-white p-8 rounded-lg shadow-lg">
-            <LoginForm />
+            <LoginForm onSubmit={handleLogin} />
           </div>
         </motion.div>
       </div>
+      <Snackbar
+        open={notification.open}
+        message={notification.message}
+        type={notification.type}
+        onClose={handleCloseNotification}
+      />
     </div>
   );
 };

@@ -1,65 +1,71 @@
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 export const ContactInfo = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-white rounded-lg shadow-lg p-8">
       <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-        Our Contact Information
+        {t('contact.info.title')}
       </h2>
       
       <div className="space-y-8">
         <div className="flex items-start">
-          <MapPinIcon className="h-6 w-6 text-blue-600 mt-1" />
+          <MapPinIcon className="h-6 w-6 text-primary mt-1" />
           <div className="ml-4">
-            <h3 className="text-lg font-medium text-gray-900">Address</h3>
-            <p className="text-gray-600">
-              45 Galle Face Terrace<br />
-              Colombo 03<br />
-              Sri Lanka
+            <h3 className="text-lg font-medium text-text">{t('contact.info.address.label')}</h3>
+            <p className="text-text/60">
+              {t('contact.info.address.value').split('\n').map((line, i) => (
+                <span key={i}>
+                  {line}
+                  <br />
+                </span>
+              ))}
             </p>
           </div>
         </div>
 
         <div className="flex items-start">
-          <PhoneIcon className="h-6 w-6 text-blue-600 mt-1" />
+          <PhoneIcon className="h-6 w-6 text-primary mt-1" />
           <div className="ml-4">
-            <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-            <p className="text-gray-600">
-              Local: +94 11 234 5678<br />
-              International: +1 (555) 123-4567
+            <h3 className="text-lg font-medium text-text">{t('contact.info.phone.label')}</h3>
+            <p className="text-text/60">
+              {t('contact.info.phone.local')}<br />
+              {t('contact.info.phone.international')}
             </p>
           </div>
         </div>
 
         <div className="flex items-start">
-          <EnvelopeIcon className="h-6 w-6 text-blue-600 mt-1" />
+          <EnvelopeIcon className="h-6 w-6 text-primary mt-1" />
           <div className="ml-4">
-            <h3 className="text-lg font-medium text-gray-900">Email</h3>
-            <p className="text-gray-600">
-              Bookings: bookings@zenratravels.com<br />
-              Support: support@zenratravels.com
+            <h3 className="text-lg font-medium text-text">{t('contact.info.email.label')}</h3>
+            <p className="text-text/60">
+              {t('contact.info.email.bookings')}<br />
+              {t('contact.info.email.support')}
             </p>
           </div>
         </div>
 
         <div className="flex items-start">
-          <ClockIcon className="h-6 w-6 text-blue-600 mt-1" />
+          <ClockIcon className="h-6 w-6 text-primary mt-1" />
           <div className="ml-4">
-            <h3 className="text-lg font-medium text-gray-900">Business Hours</h3>
-            <p className="text-gray-600">
-              Monday - Friday: 9:00 AM - 6:00 PM<br />
-              Saturday: 10:00 AM - 4:00 PM<br />
-              Sunday: Closed
+            <h3 className="text-lg font-medium text-text">{t('contact.info.hours.label')}</h3>
+            <p className="text-text/60">
+              {t('contact.info.hours.weekdays')}<br />
+              {t('contact.info.hours.saturday')}<br />
+              {t('contact.info.hours.sunday')}
             </p>
           </div>
         </div>
 
         <div className="flex items-start">
-          <GlobeAltIcon className="h-6 w-6 text-blue-600 mt-1" />
+          <GlobeAltIcon className="h-6 w-6 text-primary mt-1" />
           <div className="ml-4">
-            <h3 className="text-lg font-medium text-gray-900">Languages</h3>
-            <p className="text-gray-600">
-              English, Sinhala, Tamil, French, German
+            <h3 className="text-lg font-medium text-text">{t('contact.info.languages.label')}</h3>
+            <p className="text-text/60">
+              {t('contact.info.languages.value')}
             </p>
           </div>
         </div>

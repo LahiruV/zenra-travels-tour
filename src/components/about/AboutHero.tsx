@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { COMPANY_NAME } from '@zenra/constants';
+import { useTranslation } from 'react-i18next';
 
 export const AboutHero = () => {
+  const { t } = useTranslation();
+
   return (
     <div 
       className="relative h-[300px] bg-cover bg-center"
@@ -17,7 +20,7 @@ export const AboutHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          About {COMPANY_NAME}
+          {t('about.hero.title')}
         </motion.h1>
         <motion.p 
           className="text-xl text-center max-w-2xl"
@@ -25,7 +28,7 @@ export const AboutHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Your trusted partner in creating unforgettable travel experiences since 2010
+          {t('about.hero.subtitle')}
         </motion.p>
       </div>
     </div>

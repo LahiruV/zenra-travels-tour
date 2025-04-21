@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { TextField, Button, Checkbox, FormGroup } from '@zenra/widgets';
 import { UserIcon, EnvelopeIcon, PhoneIcon, CalendarDaysIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 import { BookingFormData, BookingFormProps } from '@zenra/models';
+import { useTranslation } from 'react-i18next';
 
 export const BookingForm = ({ packageName, onSubmit, isLoading }: BookingFormProps) => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<BookingFormData>({
     firstName: '',
     lastName: '',
@@ -33,12 +35,12 @@ export const BookingForm = ({ packageName, onSubmit, isLoading }: BookingFormPro
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">Book {packageName}</h2>
+      <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('packages.booking.title')} - {packageName}</h2>
       
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <TextField
-            label="First Name"
+            label={t('packages.booking.form.firstName')}
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
@@ -47,7 +49,7 @@ export const BookingForm = ({ packageName, onSubmit, isLoading }: BookingFormPro
           />
           
           <TextField
-            label="Last Name"
+            label={t('packages.booking.form.lastName')}
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
@@ -57,7 +59,7 @@ export const BookingForm = ({ packageName, onSubmit, isLoading }: BookingFormPro
         </div>
 
         <TextField
-          label="Email"
+          label={t('packages.booking.form.email')}
           name="email"
           type="email"
           value={formData.email}
@@ -67,7 +69,7 @@ export const BookingForm = ({ packageName, onSubmit, isLoading }: BookingFormPro
         />
 
         <TextField
-          label="Phone"
+          label={t('packages.booking.form.phone')}
           name="phone"
           type="tel"
           value={formData.phone}
@@ -77,7 +79,7 @@ export const BookingForm = ({ packageName, onSubmit, isLoading }: BookingFormPro
         />
 
         <TextField
-          label="Travel Date"
+          label={t('packages.booking.form.travelDate')}
           name="travelDate"
           type="date"
           value={formData.travelDate}
@@ -88,7 +90,7 @@ export const BookingForm = ({ packageName, onSubmit, isLoading }: BookingFormPro
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <TextField
-            label="Number of Adults"
+            label={t('packages.booking.form.adults')}
             name="adults"
             type="number"
             min="1"
@@ -99,7 +101,7 @@ export const BookingForm = ({ packageName, onSubmit, isLoading }: BookingFormPro
           />
           
           <TextField
-            label="Number of Children"
+            label={t('packages.booking.form.children')}
             name="children"
             type="number"
             min="0"
@@ -110,37 +112,37 @@ export const BookingForm = ({ packageName, onSubmit, isLoading }: BookingFormPro
         </div>
 
         <div className="bg-gray-50 p-4 rounded-lg">
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">Additional Services</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('packages.booking.form.services.title')}</h3>
           <FormGroup>
             <Checkbox
               checked={formData.includeMeals}
               onChange={handleChange}
               name="includeMeals"
-              label="Include Meals"
+              label={t('packages.booking.form.services.meals')}
             />
             <Checkbox
               checked={formData.includeTransport}
               onChange={handleChange}
               name="includeTransport"
-              label="Include Transport"
+              label={t('packages.booking.form.services.transport')}
             />
             <Checkbox
               checked={formData.includeAccommodation}
               onChange={handleChange}
               name="includeAccommodation"
-              label="Include Accommodation"
+              label={t('packages.booking.form.services.accommodation')}
             />
           </FormGroup>
         </div>
 
         <TextField
-          label="Special Requests"
+          label={t('packages.booking.form.specialRequests.label')}
           name="specialRequests"
           multiline
           rows={4}
           value={formData.specialRequests}
           onChange={handleChange}
-          helperText="Optional: Any dietary requirements or special accommodations"
+          helperText={t('packages.booking.form.specialRequests.placeholder')}
         />
 
         <Button
@@ -150,7 +152,7 @@ export const BookingForm = ({ packageName, onSubmit, isLoading }: BookingFormPro
           fullWidth
           loading={isLoading}
         >
-          Book Now
+          {t('packages.booking.form.submit')}
         </Button>
       </form>
     </div>

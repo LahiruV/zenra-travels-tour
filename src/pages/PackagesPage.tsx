@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { PackageCard } from '../components/packages/PackageCard';
 import { PackageFilters } from '../components/packages/PackageFilters';
 import { PageTransition } from '../components/PageTransition';
+import { useTranslation } from 'react-i18next';
 
 interface Package {
   title: string;
@@ -14,41 +15,22 @@ interface Package {
 }
 
 export const PackagesPage = () => {
+  const { t } = useTranslation();
   const [duration, setDuration] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
 
-  const allPackages = [
-    {
-      id: '1',
-      title: "Cultural Heritage Tour",
-      description: "Explore ancient temples, historical sites, and traditional villages.",
-      image: "https://images.unsplash.com/photo-1625467096769-fdd3ffac8c6e?q=80&w=800&auto=format&fit=crop",
-      price: 1299,
-      duration: "6 Days",
-      groupSize: "Max 12 people",
-      startDate: "Available year-round"
-    },
-    {
-      id: '2',
-      title: "Beach Paradise Escape",
-      description: "Relax on pristine beaches and enjoy water sports activities.",
-      image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=800&auto=format&fit=crop",
-      price: 999,
-      duration: "5 Days",
-      groupSize: "Max 10 people",
-      startDate: "Available year-round"
-    },
-    {
-      id: '3',
-      title: "Wildlife Safari Adventure",
-      description: "Encounter elephants, leopards, and exotic birds in their natural habitat.",
-      image: "https://images.unsplash.com/photo-1562698013-ac13558052cd?q=80&w=800&auto=format&fit=crop",
-      price: 1499,
-      duration: "7 Days",
-      groupSize: "Max 8 people",
-      startDate: "Available year-round"
-    }
-  ];
+  const packageKeys = ['culturalHeritage', 'beachParadise', 'wildlifeSafari'];
+  
+  const allPackages = packageKeys.map((key, index) => ({
+    id: String(index + 1),
+    title: t(`packages.items.${key}.title`),
+    description: t(`packages.items.${key}.description`),
+    image: t(`packages.items.${key}.image`),
+    price: Number(t(`packages.items.${key}.price`)),
+    duration: t(`packages.items.${key}.duration`),
+    groupSize: t(`packages.items.${key}.groupSize`),
+    startDate: t(`packages.items.${key}.startDate`)
+  }));
 
   const filterPackages = (packages: Package[]) => {
     return packages.filter(pkg => {
@@ -86,9 +68,9 @@ export const PackagesPage = () => {
     <PageTransition>
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Explore Our Packages</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('packages.title')}</h1>
         <p className="text-xl text-gray-600">
-          Discover our carefully curated travel packages for an unforgettable Sri Lankan experience
+          {t('packages.subtitle')}
         </p>
       </div>
 

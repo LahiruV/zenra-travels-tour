@@ -8,3 +8,4 @@ export { RegisterForm } from './auth/RegisterForm';
 export { PageTransition } from './PageTransition';
 export { ContactForm, ContactInfo, TravelFeatures } from './contact';
 export { AboutHero, AboutStats, AboutStory, AboutValues, AboutTeam } from './about';
+export { DestinationHero, DestinationGrid, DestinationCard } from './destinations';

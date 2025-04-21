@@ -1,45 +1,48 @@
 import { motion } from 'framer-motion';
 import { ShieldCheckIcon, GlobeAsiaAustraliaIcon, UserGroupIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
 const values = [
   {
     icon: ShieldCheckIcon,
-    title: 'Trust & Reliability',
-    description: 'We maintain the highest standards of service and transparency in all our operations.'
+    key: 'trust'
   },
   {
     icon: GlobeAsiaAustraliaIcon,
-    title: 'Sustainable Tourism',
-    description: 'Committed to eco-friendly practices and supporting local communities.'
+    key: 'sustainability'
   },
   {
     icon: UserGroupIcon,
-    title: 'Personal Touch',
-    description: 'Every journey is tailored to your preferences and travel style.'
+    key: 'personal'
   },
   {
     icon: SparklesIcon,
-    title: 'Excellence',
-    description: 'Continuously striving to exceed expectations in service quality.'
+    key: 'excellence'
   }
 ];
 
 export const AboutValues = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Values</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('about.values.title')}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {values.map((value, index) => (
           <motion.div
-            key={value.title}
+            key={value.key}
             className="bg-white rounded-lg shadow-lg p-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
           >
-            <value.icon className="h-12 w-12 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
-            <p className="text-gray-600">{value.description}</p>
+            <value.icon className="h-12 w-12 text-primary mb-4" />
+            <h3 className="text-xl font-semibold text-text mb-2">
+              {t(`about.values.items.${value.key}.title`)}
+            </h3>
+            <p className="text-text/60">
+              {t(`about.values.items.${value.key}.description`)}
+            </p>
           </motion.div>
         ))}
       </div>
