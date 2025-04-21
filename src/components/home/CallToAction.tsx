@@ -1,12 +1,17 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export const CallToAction = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  const handleExplore = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate('/packages');
+  }, [navigate]);
 
   useEffect(() => {
     const video = document.getElementById('cta-video') as HTMLVideoElement;
@@ -39,7 +44,7 @@ export const CallToAction = () => {
         <h2 className="text-3xl font-bold text-white mb-4">{t('home.cta.title')}</h2>
         <p className="text-xl text-white mb-8">{t('home.cta.subtitle')}</p>
         <motion.button
-          onClick={() => navigate('/packages')}
+          onClick={handleExplore}
           className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

@@ -4,3 +4,4 @@ export { CallToAction } from './CallToAction';
 export { CustomerExperience } from './CustomerExperience';
 export { PopularPackages } from './PopularPackages';
 export { ImageGallery } from './ImageGallery';
+export { Map } from './Map';

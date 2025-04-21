@@ -1,5 +1,5 @@
 import { Hero } from '@zenra/components'
-import { FeaturedDestinations, Experiences, CustomerExperience, CallToAction, PopularPackages, ImageGallery } from '@zenra/components';
+import { FeaturedDestinations, Experiences, CustomerExperience, CallToAction, PopularPackages, ImageGallery, Map } from '@zenra/components';
 import { PageTransition } from '@zenra/components';
 
 export const HomePage = () => {
@@ -11,6 +11,7 @@ export const HomePage = () => {
       <ImageGallery />
       <Experiences />
       <CustomerExperience />
+      <Map />
       <CallToAction />
     </PageTransition>
   );

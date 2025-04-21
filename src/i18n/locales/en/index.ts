@@ -6,6 +6,7 @@ import { common } from './common';
 import { auth } from './auth';
 import { packages } from './packages';
 import { destinations } from './destinations';
+import { map } from './map';
 
 export const en = {
   ...common,
@@ -16,4 +17,5 @@ export const en = {
   auth,
   packages,
   destinations,
+  map,
 };
