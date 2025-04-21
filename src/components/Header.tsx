@@ -13,50 +13,52 @@ export const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-white shadow-sm relative">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center">
-        <div className="absolute left-4 sm:left-6 lg:left-8">
-          <Link to="/" className="text-2xl font-bold text-primary">{COMPANY_NAME}</Link>
+    <header className="bg-white shadow-sm">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div>
+          <Link to="/" className="text-2xl font-bold text-primary">
+            {COMPANY_NAME}
+          </Link>
         </div>
-        
-        <div className="hidden md:flex space-x-8 mx-auto">
-          <Link 
-            to="/destinations" 
+
+        <div className="hidden md:flex space-x-8">
+          <Link
+            to="/destinations"
             className={`${isActive('/destinations') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
           >
             {t('nav.destinations')}
           </Link>
-          <Link 
-            to="/packages" 
+          <Link
+            to="/packages"
             className={`${isActive('/packages') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
           >
             {t('nav.packages')}
           </Link>
-          <Link 
-            to="/about" 
+          <Link
+            to="/about"
             className={`${isActive('/about') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
           >
             {t('nav.about')}
           </Link>
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className={`${isActive('/contact') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
           >
             {t('nav.contact')}
           </Link>
         </div>
-        
-        <div className="absolute right-4 sm:right-6 lg:right-8 flex items-center space-x-4">
+
+        <div className="hidden md:flex items-center space-x-4">
           <LanguageSelector />
-          <Link 
-            to="/login" 
+          <Link
+            to="/login"
             className={`${isActive('/login') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
           >
             {t('nav.login')}
           </Link>
         </div>
 
-        <button 
+        <button
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -68,43 +70,45 @@ export const Header = () => {
         </button>
       </nav>
 
-      {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link 
-              to="/destinations" 
-              className={`block px-3 py-2 ${isActive('/destinations') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
-            >
-              {t('nav.destinations')}
-            </Link>
-            <Link 
-              to="/packages" 
-              className={`block px-3 py-2 ${isActive('/packages') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
-            >
-              {t('nav.packages')}
-            </Link>
-            <Link 
-              to="/about" 
-              className={`block px-3 py-2 ${isActive('/about') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
-            >
-              {t('nav.about')}
-            </Link>
-            <Link 
-              to="/contact" 
-              className={`block px-3 py-2 ${isActive('/contact') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
-            >
-              {t('nav.contact')}
-            </Link>
-            <Link 
-              to="/login" 
-              className={`block px-3 py-2 ${isActive('/login') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
-            >
-              {t('nav.login')}
-            </Link>
-            <div className="px-3 py-2"><LanguageSelector /></div>
+      <div
+        className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-white shadow-md`}
+      >
+        <div className="px-4 pt-4 pb-4 space-y-2">
+          <Link
+            to="/destinations"
+            className={`block ${isActive('/destinations') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
+          >
+            {t('nav.destinations')}
+          </Link>
+          <Link
+            to="/packages"
+            className={`block ${isActive('/packages') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
+          >
+            {t('nav.packages')}
+          </Link>
+          <Link
+            to="/about"
+            className={`block ${isActive('/about') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
+          >
+            {t('nav.about')}
+          </Link>
+          <Link
+            to="/contact"
+            className={`block ${isActive('/contact') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
+          >
+            {t('nav.contact')}
+          </Link>
+          <Link
+            to="/login"
+            className={`block ${isActive('/login') ? 'text-primary font-medium' : 'text-text/60'} hover:text-primary transition-colors`}
+          >
+            {t('nav.login')}
+          </Link>
+          <div>
+            <LanguageSelector />
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 };
