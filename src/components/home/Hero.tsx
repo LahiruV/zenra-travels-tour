@@ -20,7 +20,7 @@ export const Hero = () => {
   };
 
   return (
-    <div 
+    <div
       className="relative h-[600px] overflow-hidden"
     >
       <video
@@ -35,14 +35,14 @@ export const Hero = () => {
         <source src="https://videos.pexels.com/video-files/2187246/2187246-uhd_2560_1440_30fps.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-50" />
-      <motion.div 
+      <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: isVideoLoaded ? 1 : 0, y: isVideoLoaded ? 0 : 20 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <div className="text-white max-w-2xl">
-          <motion.h1 
+          <motion.h1
             className="text-5xl font-bold mb-4"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: isVideoLoaded ? 1 : 0, x: isVideoLoaded ? 0 : -20 }}
@@ -50,7 +50,7 @@ export const Hero = () => {
           >
             {t('home.hero.title')}
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl mb-8"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: isVideoLoaded ? 1 : 0, x: isVideoLoaded ? 0 : -20 }}
@@ -58,7 +58,7 @@ export const Hero = () => {
           >
             {t('home.hero.subtitle')}
           </motion.p>
-          <motion.button 
+          <motion.button
             className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVideoLoaded ? 1 : 0, y: isVideoLoaded ? 0 : 20 }}

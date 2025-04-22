@@ -1,5 +1,5 @@
 export { Header } from './Header';
-export { Hero } from './Hero';
+export { Hero } from './home/Hero';
 export { Footer } from './Footer';
 export { FeaturedDestinations, Experiences, CallToAction, CustomerExperience, PopularPackages, ImageGallery, Map } from './home';
 export { AuthCard } from './auth/AuthCard';
