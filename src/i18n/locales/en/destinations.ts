@@ -1,7 +1,7 @@
 export const destinations = {
   title: 'Discover Sri Lanka\'s Most Beautiful Places',
   subtitle: 'From ancient cities to pristine beaches, explore the diverse destinations of this tropical paradise',
-  searchPlaceholder: 'Search destinations...',
+  searchPlaceholder: 'Search Destinations...',
   locations: {
     sigiriya: {
       name: 'Sigiriya',
