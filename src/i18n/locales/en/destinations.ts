@@ -182,6 +182,146 @@ export const destinations = {
         'Archaeological Walks'
       ]
     },
+    jaffna: {
+      name: 'Jaffna',
+      region: 'Northern Province',
+      description: 'Historic city with unique Tamil culture, Hindu temples, and Dutch colonial heritage.',
+      bestTime: 'May to September',
+      highlights: [
+        'Nallur Kandaswamy Temple',
+        'Jaffna Fort',
+        'Nagadeepa Temple',
+        'Public Library',
+        'Casuarina Beach'
+      ],
+      activities: [
+        'Temple Tours',
+        'Cultural Experiences',
+        'Local Food Tasting',
+        'Historical Sites',
+        'Beach Visits'
+      ]
+    },
+    nilaweli: {
+      name: 'Nilaweli',
+      region: 'Eastern Province',
+      description: 'Pristine beach destination known for its white sands and crystal-clear waters.',
+      bestTime: 'April to September',
+      highlights: [
+        'Nilaweli Beach',
+        'Pigeon Island',
+        'Coral Reefs',
+        'Hot Springs',
+        'Marine Life'
+      ],
+      activities: [
+        'Snorkeling',
+        'Diving',
+        'Beach Activities',
+        'Boat Tours',
+        'Marine Photography'
+      ]
+    },
+    polonnaruwa: {
+      name: 'Polonnaruwa',
+      region: 'North Central Province',
+      description: 'Ancient city featuring well-preserved ruins and archaeological treasures.',
+      bestTime: 'June to September',
+      highlights: [
+        'Royal Palace',
+        'Gal Vihara',
+        'Polonnaruwa Vatadage',
+        'Rankoth Vehera',
+        'Ancient Reservoirs'
+      ],
+      activities: [
+        'Archaeological Tours',
+        'Cycling',
+        'Photography',
+        'Historical Walks',
+        'Cultural Visits'
+      ]
+    },
+    yala: {
+      name: 'Yala National Park',
+      region: 'Southern Province',
+      description: 'Largest national park famous for leopards, elephants, and diverse wildlife.',
+      bestTime: 'February to July',
+      highlights: [
+        'Leopard Sightings',
+        'Wild Elephants',
+        'Coastal Ecosystems',
+        'Ancient Ruins',
+        'Bird Watching'
+      ],
+      activities: [
+        'Safari Tours',
+        'Wildlife Photography',
+        'Bird Watching',
+        'Camping',
+        'Nature Walks'
+      ]
+    },
+    rekawa: {
+      name: 'Rekawa Turtle Beach',
+      region: 'Southern Province',
+      description: 'Natural turtle nesting site where five species of marine turtles come to nest.',
+      bestTime: 'Year-round',
+      highlights: [
+        'Turtle Watching',
+        'Pristine Beach',
+        'Conservation Center',
+        'Night Tours',
+        'Marine Life'
+      ],
+      activities: [
+        'Turtle Watching',
+        'Beach Walks',
+        'Conservation Activities',
+        'Photography',
+        'Educational Tours'
+      ]
+    },
+    mirissa: {
+      name: 'Mirissa',
+      region: 'Southern Province',
+      description: 'Charming coastal town known for whale watching, surfing, and beautiful beaches.',
+      bestTime: 'November to April',
+      highlights: [
+        'Whale Watching',
+        'Secret Beach',
+        'Coconut Tree Hill',
+        'Surf Points',
+        'Sunset Views'
+      ],
+      activities: [
+        'Whale Watching',
+        'Surfing',
+        'Snorkeling',
+        'Beach Relaxation',
+        'Sunset Cruises'
+      ]
+    },
+    nuwaraeliya: {
+      name: 'Nuwara Eliya',
+      region: 'Central Province',
+      description: 'Hill country retreat known for tea plantations, cool climate, and colonial architecture.',
+      bestTime: 'March to May',
+      highlights: [
+        'Tea Plantations',
+        'Gregory Lake',
+        'Victoria Park',
+        'Horton Plains',
+        'Colonial Buildings'
+      ],
+      activities: [
+        'Tea Factory Tours',
+        'Golf',
+        'Boating',
+        'Garden Visits',
+        'Mountain Hiking'
+      ]
+    },
     arugambay: {
       name: 'Arugam Bay',
       region: 'Eastern Province',
